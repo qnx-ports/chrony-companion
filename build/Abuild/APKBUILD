@@ -4,7 +4,7 @@
 # Maintainer: J. Scaffidi <jscaffidi@qnx.com>
 pkgname=chrony
 pkgver=4.8
-pkgrel=${pkgrel:-0}
+pkgrel=1
 pkgdesc="Advanced NTP client and server"
 url="https://gitlab.com/chrony/chrony/"
 arch="all"
@@ -77,7 +77,6 @@ package() {
     install -m644 "$srcdir"/chrony.conf "$pkgdir"/etc/chrony/chrony.conf
 }
 
-options="$options ${DISABLE_CHECK:+!check}"
 sha512sums="
 acfb9e456df3358c0b32b75a2c645347c5be1433ec5e247576c2102ee1eb72499b6deb8473358b279e926dcd11d48f3b0b0b0ad24f51594309f69637f8a23f07  chrony-4.8.tar.gz
 01327a629ac4ec8e476cc97ed075deaa5a0b3a74d22d22516a016d624a3d6c3219de266702bc1a993bfe9b437eef31d85f265416d2a5b68cba8610f480227998  00-build-patches.patch
